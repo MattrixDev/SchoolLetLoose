@@ -8,7 +8,7 @@ import mongoose from 'mongoose';
 
 import { setupRoutes } from './routes';
 import { setupSocketHandlers } from './socket';
-import { ServerToClientEvents, ClientToServerEvents } from '@magicschool/shared';
+import { ServerToClientEvents, ClientToServerEvents } from './types';
 
 // Load environment variables
 dotenv.config();
@@ -50,7 +50,7 @@ setupSocketHandlers(io);
 // MongoDB connection
 const connectDB = async () => {
   try {
-    const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/magicschool';
+    const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/schoolletloose';
     await mongoose.connect(mongoUri);
     console.log('✅ Connected to MongoDB');
   } catch (error) {

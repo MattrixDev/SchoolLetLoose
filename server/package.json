@@ -1,7 +1,7 @@
 {
-  "name": "@magicschool/server",
+  "name": "@schoolletloose/server",
   "version": "1.0.0",
-  "description": "Backend server for MagicSchool card game",
+  "description": "Backend server for School Let Loose card game",
   "main": "dist/server.js",
   "scripts": {
     "build": "tsc",
@@ -12,7 +12,6 @@
     "lint:fix": "eslint src --ext .ts --fix"
   },
   "dependencies": {
-    "@magicschool/shared": "^1.0.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",

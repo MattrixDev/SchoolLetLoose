@@ -1,5 +1,5 @@
 import { Server } from 'socket.io';
-import { ServerToClientEvents, ClientToServerEvents } from '@magicschool/shared';
+import { ServerToClientEvents, ClientToServerEvents } from '../types';
 
 /**
  * Setup Socket.IO event handlers for real-time gameplay

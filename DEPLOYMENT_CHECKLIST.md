@@ -1,4 +1,4 @@
-# 🚀 MagicSchool Deployment Checklist
+# 🚀 School Let Loose Deployment Checklist
 
 ## Pre-Deployment ✅
 
@@ -39,7 +39,7 @@
 4. Add environment variables in Railway dashboard:
    ```
    NODE_ENV=production
-   MONGODB_URI=mongodb+srv://user:pass@cluster.mongodb.net/magicschool
+   MONGODB_URI=mongodb+srv://user:pass@cluster.mongodb.net/schoolletloose
    JWT_SECRET=your-super-secret-production-key
    CORS_ORIGIN=https://your-vercel-app.vercel.app
    PORT=3001

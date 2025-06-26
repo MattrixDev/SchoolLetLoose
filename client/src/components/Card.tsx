@@ -1,5 +1,5 @@
-import type { Card } from '@magicschool/shared';
-import { CardType, ManaCost } from '@magicschool/shared';
+import type { Card } from '@schoolletloose/shared';
+import { CardType, ManaCost } from '@schoolletloose/shared';
 import { clsx } from 'clsx';
 
 interface CardProps {

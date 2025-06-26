@@ -1,4 +1,4 @@
-# MagicSchool Card Game - Copilot Instructions
+# School Let Loose Card Game - Copilot Instructions
 
 <!-- Use this file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
 
@@ -22,7 +22,7 @@ This is a full-stack multiplayer card game inspired by Magic: The Gathering, fea
 - Follow React functional components with hooks
 - Implement proper error handling and validation
 - Write comprehensive tests for game logic
-- Use shared types from @magicschool/shared package
+- Use shared types from @schoolletloose/shared package
 - Follow responsive design principles with Tailwind CSS
 
 ## Game Rules

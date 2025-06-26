@@ -19,7 +19,7 @@ function HomePage() {
     <div className="min-h-screen text-white flex items-center justify-center">
       <div className="text-center max-w-4xl px-8">
         <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-          🎓 MagicSchool
+          🎓 School Let Loose
         </h1>
         <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
           Welcome to the magical world of school-themed cards! Build your deck using different school subjects as mana types and compete in strategic battles.

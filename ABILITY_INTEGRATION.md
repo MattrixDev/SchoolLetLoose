@@ -2,7 +2,7 @@
 
 ## Overview
 
-Successfully enhanced the MagicSchool card system with a comprehensive effects library, stress mechanics, and tap-based activation system. The game now features rich tactical depth with various status effects and strategic resource management.
+Successfully enhanced the School Let Loose card system with a comprehensive effects library, stress mechanics, and tap-based activation system. The game now features rich tactical depth with various status effects and strategic resource management.
 
 ## New Features Implemented
 

@@ -4,7 +4,7 @@ import {
   CreateCardResponse, 
   GetEffectsResponse, 
   ApiResponse 
-} from '@magicschool/shared';
+} from '@schoolletloose/shared';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 

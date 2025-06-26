@@ -1,6 +1,6 @@
-# MagicSchool - Deployment Guide
+# School Let Loose - Deployment Guide
 
-This guide will help you deploy the MagicSchool card game to production.
+This guide will help you deploy the School Let Loose card game to production.
 
 ## Architecture
 
@@ -41,7 +41,7 @@ This guide will help you deploy the MagicSchool card game to production.
    ```
    NODE_ENV=production
    PORT=3001
-   MONGODB_URI=mongodb+srv://user:pass@cluster.mongodb.net/magicschool
+   MONGODB_URI=mongodb+srv://user:pass@cluster.mongodb.net/schoolletloose
    JWT_SECRET=your-super-secret-production-key
    CORS_ORIGIN=https://your-vercel-app.vercel.app
    ```

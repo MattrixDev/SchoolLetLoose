@@ -1,7 +1,7 @@
 import { Router, Request, Response } from 'express';
 import { Card } from '../models/Card';
-import { GameEngine } from '@magicschool/shared';
-import { CreateCardRequest, CreateCardResponse, ApiResponse } from '@magicschool/shared';
+import { GameEngine } from '../gameEngine';
+import { CreateCardRequest, CreateCardResponse, ApiResponse } from '../types';
 
 export const cardRoutes = Router();
 

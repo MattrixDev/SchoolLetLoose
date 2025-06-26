@@ -212,7 +212,7 @@ export function AbilityBuilder() {
   }
 
   useEffect(() => {
-    const savedAbilities = localStorage.getItem('magicschool-abilities');
+    const savedAbilities = localStorage.getItem('schoolletloose-abilities');
     if (savedAbilities) {
       setAbilities(JSON.parse(savedAbilities));
     }
@@ -254,7 +254,7 @@ export function AbilityBuilder() {
 
   const saveAbilities = (updatedAbilities: AbilityTemplate[]) => {
     setAbilities(updatedAbilities);
-    localStorage.setItem('magicschool-abilities', JSON.stringify(updatedAbilities));
+    localStorage.setItem('schoolletloose-abilities', JSON.stringify(updatedAbilities));
   };
 
   const saveAbility = () => {

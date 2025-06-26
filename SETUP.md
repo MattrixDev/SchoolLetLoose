@@ -1,4 +1,4 @@
-# MagicSchool Setup Guide
+# School Let Loose Setup Guide
 
 ## Prerequisites Installation
 
@@ -36,7 +36,7 @@
 1. Download from [https://www.mongodb.com/try/download/community](https://www.mongodb.com/try/download/community)
 2. Install MongoDB Community Server
 3. Start the MongoDB service
-4. Use `mongodb://localhost:27017/magicschool` as your connection string
+4. Use `mongodb://localhost:27017/schoolletloose` as your connection string
 
 ## Project Setup
 
@@ -44,7 +44,7 @@
 
 ```powershell
 # Navigate to project root
-cd c:\Users\matti\MagicSchool
+cd c:\Users\matti\SchoolLetLoose
 
 # Install root dependencies
 npm install
@@ -66,7 +66,7 @@ npm run build:shared
 ```env
 NODE_ENV=development
 PORT=3001
-MONGODB_URI=mongodb://localhost:27017/magicschool
+MONGODB_URI=mongodb://localhost:27017/schoolletloose
 JWT_SECRET=your-super-secret-jwt-key-here
 CORS_ORIGIN=http://localhost:5173
 ```

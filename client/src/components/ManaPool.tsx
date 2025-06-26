@@ -1,4 +1,4 @@
-import { ManaPool as ManaPoolType, GAME_CONSTANTS } from '@magicschool/shared';
+import { ManaPool as ManaPoolType, GAME_CONSTANTS } from '@schoolletloose/shared';
 import { clsx } from 'clsx';
 
 interface ManaPoolProps {

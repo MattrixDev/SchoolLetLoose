@@ -1,4 +1,4 @@
-# MagicSchool Card Game
+# School Let Loose Card Game
 
 A real-time multiplayer card game inspired by Magic: The Gathering, featuring school-themed cards and custom card creation.
 
@@ -41,7 +41,7 @@ A real-time multiplayer card game inspired by Magic: The Gathering, featuring sc
 1. **Clone and install dependencies**:
    ```bash
    git clone <repository-url>
-   cd MagicSchool
+   cd SchoolLetLoose
    npm run install:all
    ```
 
@@ -53,7 +53,7 @@ A real-time multiplayer card game inspired by Magic: The Gathering, featuring sc
    ```env
    NODE_ENV=development
    PORT=3001
-   MONGODB_URI=mongodb://localhost:27017/magicschool
+   MONGODB_URI=mongodb://localhost:27017/schoolletloose
    JWT_SECRET=your-jwt-secret-here
    CORS_ORIGIN=http://localhost:5173
    ```
@@ -97,7 +97,7 @@ A real-time multiplayer card game inspired by Magic: The Gathering, featuring sc
 
 ### Project Structure
 ```
-MagicSchool/
+SchoolLetLoose/
 ├── client/          # React frontend
 ├── server/          # Node.js backend  
 ├── shared/          # Shared types and logic

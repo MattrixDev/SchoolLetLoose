@@ -21,7 +21,7 @@ export function Footer() {
               <Github className="h-5 w-5" />
             </a>
             <span className="text-gray-500 text-sm">
-              © 2024 MagicSchool. All rights reserved.
+              © 2024 School Let Loose. All rights reserved.
             </span>
           </div>
         </div>

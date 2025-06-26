@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
 import { Room as RoomModel } from '../models/Room';
-import { ApiResponse } from '@magicschool/shared';
+import { ApiResponse } from '../types';
 
 export const roomRoutes = Router();
 

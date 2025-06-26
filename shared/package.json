@@ -1,7 +1,7 @@
 {
-  "name": "@magicschool/shared",
+  "name": "@schoolletloose/shared",
   "version": "1.0.0",
-  "description": "Shared types and game logic for MagicSchool card game",
+  "description": "Shared types and game logic for School Let Loose card game",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

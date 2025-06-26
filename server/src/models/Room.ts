@@ -1,5 +1,5 @@
 import { Schema, model, Document } from 'mongoose';
-import { Room as RoomType, GameState } from '@magicschool/shared';
+import { Room as RoomType, GameState } from '../types';
 
 export interface RoomDocument extends Omit<RoomType, 'id'>, Document {
   _id: string;

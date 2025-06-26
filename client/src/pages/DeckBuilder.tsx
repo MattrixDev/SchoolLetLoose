@@ -49,8 +49,8 @@ export function DeckBuilder() {
 
   useEffect(() => {
     // Load cards (global) and decks (user-specific) from localStorage
-    const savedCards = localStorage.getItem('magicschool-cards');
-    const savedDecks = localStorage.getItem('magicschool-decks');
+    const savedCards = localStorage.getItem('schoolletloose-cards');
+    const savedDecks = localStorage.getItem('schoolletloose-decks');
     
     if (savedCards) {
       setCards(JSON.parse(savedCards));
@@ -134,7 +134,7 @@ export function DeckBuilder() {
     };
 
     // Get all decks from localStorage (including other users' decks)
-    const savedDecks = localStorage.getItem('magicschool-decks');
+    const savedDecks = localStorage.getItem('schoolletloose-decks');
     const allDecks = savedDecks ? JSON.parse(savedDecks) : [];
     
     // Update/add only current user's deck
@@ -143,7 +143,7 @@ export function DeckBuilder() {
       : [...allDecks, deckToSave];
 
     // Save all decks back to localStorage
-    localStorage.setItem('magicschool-decks', JSON.stringify(updatedAllDecks));
+    localStorage.setItem('schoolletloose-decks', JSON.stringify(updatedAllDecks));
     
     // Update current user's deck list for display
     const userDecks = updatedAllDecks.filter((deck: Deck) => deck.userId === user?.id);

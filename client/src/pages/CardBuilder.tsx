@@ -170,7 +170,7 @@ export function CardBuilder() {
   useEffect(() => {
     // Load custom abilities for creators and admins
     if (user && (user.role === 'creator' || user.role === 'admin')) {
-      const savedAbilities = localStorage.getItem('magicschool-abilities');
+      const savedAbilities = localStorage.getItem('schoolletloose-abilities');
       if (savedAbilities) {
         try {
           const abilities = JSON.parse(savedAbilities).filter((ability: AbilityTemplate) => ability.isActive);
@@ -182,7 +182,7 @@ export function CardBuilder() {
     }
 
     // Load card for editing
-    const editCard = localStorage.getItem('magicschool_edit_card');
+    const editCard = localStorage.getItem('schoolletloose_edit_card');
     if (editCard) {
       try {
         const cardData = JSON.parse(editCard);
@@ -204,7 +204,7 @@ export function CardBuilder() {
         if (cardData.artworkUrl && cardData.artworkUrl.startsWith('data:')) {
           setUploadedImage(cardData.artworkUrl);
         }
-        localStorage.removeItem('magicschool_edit_card'); // Clear after loading
+        localStorage.removeItem('schoolletloose_edit_card'); // Clear after loading
       } catch (error) {
         console.error('Error loading card for editing:', error);
       }
@@ -298,7 +298,7 @@ export function CardBuilder() {
             : ability
         );
         setCustomAbilities(updatedAbilities);
-        localStorage.setItem('magicschool-abilities', JSON.stringify(updatedAbilities));
+        localStorage.setItem('schoolletloose-abilities', JSON.stringify(updatedAbilities));
       }
     }
     setShowEffectSelector(false);
@@ -338,7 +338,7 @@ export function CardBuilder() {
       };
 
       // Get existing cards from localStorage
-      const existingCards = JSON.parse(localStorage.getItem('magicschool-cards') || '[]');
+      const existingCards = JSON.parse(localStorage.getItem('schoolletloose-cards') || '[]');
       
       if (editingCardId) {
         // Update existing card (only if user is creator/admin or it's their suggestion)
@@ -370,7 +370,7 @@ export function CardBuilder() {
         }
       }
 
-      localStorage.setItem('magicschool-cards', JSON.stringify(existingCards));
+      localStorage.setItem('schoolletloose-cards', JSON.stringify(existingCards));
       console.log('Total cards in storage:', existingCards.length);
       
       // Navigate to collection to see the saved card

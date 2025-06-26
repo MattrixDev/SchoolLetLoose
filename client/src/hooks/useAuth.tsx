@@ -76,7 +76,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // Load user from localStorage on mount
   useEffect(() => {
-    const savedUser = localStorage.getItem('magicschool-user');
+    const savedUser = localStorage.getItem('schoolletloose-user');
     if (savedUser) {
       try {
         const user = JSON.parse(savedUser);
@@ -86,7 +86,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         });
       } catch (error) {
         console.error('Error loading saved user:', error);
-        localStorage.removeItem('magicschool-user');
+        localStorage.removeItem('schoolletloose-user');
       }
     }
   }, []);
@@ -121,7 +121,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       });
 
       // Save to localStorage
-      localStorage.setItem('magicschool-user', JSON.stringify(updatedUser));
+      localStorage.setItem('schoolletloose-user', JSON.stringify(updatedUser));
       
     } catch (error) {
       throw error;
@@ -168,7 +168,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       });
 
       // Save to localStorage
-      localStorage.setItem('magicschool-user', JSON.stringify(newUser));
+      localStorage.setItem('schoolletloose-user', JSON.stringify(newUser));
       
     } catch (error) {
       throw error;
@@ -182,7 +182,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       user: null,
       isAuthenticated: false
     });
-    localStorage.removeItem('magicschool-user');
+    localStorage.removeItem('schoolletloose-user');
   };
 
   const updateUser = (user: User) => {
@@ -190,7 +190,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       ...prev,
       user
     }));
-    localStorage.setItem('magicschool-user', JSON.stringify(user));
+    localStorage.setItem('schoolletloose-user', JSON.stringify(user));
   };
 
   return (

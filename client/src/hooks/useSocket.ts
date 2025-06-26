@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { io, Socket } from 'socket.io-client';
-import { ServerToClientEvents, ClientToServerEvents, GameState } from '@magicschool/shared';
+import { ServerToClientEvents, ClientToServerEvents, GameState } from '@schoolletloose/shared';
 
 export function useSocket(url?: string) {
   const [socket, setSocket] = useState<Socket<ServerToClientEvents, ClientToServerEvents> | null>(null);

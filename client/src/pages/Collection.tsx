@@ -29,7 +29,7 @@ export function Collection() {
   useEffect(() => {
     // Load cards from localStorage
     try {
-      const savedCards = localStorage.getItem('magicschool-cards');
+      const savedCards = localStorage.getItem('schoolletloose-cards');
       if (savedCards) {
         const parsedCards = JSON.parse(savedCards);
         console.log('Loaded cards from storage:', parsedCards.length, 'cards');
@@ -45,7 +45,7 @@ export function Collection() {
 
   const clearAllCards = () => {
     if (confirm('Are you sure you want to delete ALL cards? This action cannot be undone.')) {
-      localStorage.removeItem('magicschool-cards');
+      localStorage.removeItem('schoolletloose-cards');
       setCards([]);
       setSelectedCard(null);
       console.log('All cards cleared from storage');
@@ -54,7 +54,7 @@ export function Collection() {
 
   const loadCards = () => {
     try {
-      const savedCards = localStorage.getItem('magicschool-cards');
+      const savedCards = localStorage.getItem('schoolletloose-cards');
       if (savedCards) {
         const parsedCards = JSON.parse(savedCards);
         console.log('Reloaded cards from storage:', parsedCards.length, 'cards');
@@ -100,7 +100,7 @@ export function Collection() {
       card.id === cardId ? { ...card, status: 'approved' } : card
     );
     setCards(updatedCards);
-    localStorage.setItem('magicschool-cards', JSON.stringify(updatedCards));
+    localStorage.setItem('schoolletloose-cards', JSON.stringify(updatedCards));
   };
 
   const rejectCard = (cardId: string) => {
@@ -116,7 +116,7 @@ export function Collection() {
     if (confirm('Are you sure you want to delete this card?')) {
       const updatedCards = cards.filter(card => card.id !== cardId);
       setCards(updatedCards);
-      localStorage.setItem('magicschool-cards', JSON.stringify(updatedCards));
+      localStorage.setItem('schoolletloose-cards', JSON.stringify(updatedCards));
       setSelectedCard(null);
     }
   };
@@ -129,7 +129,7 @@ export function Collection() {
     };
     const updatedCards = [...cards, newCard];
     setCards(updatedCards);
-    localStorage.setItem('magicschool-cards', JSON.stringify(updatedCards));
+    localStorage.setItem('schoolletloose-cards', JSON.stringify(updatedCards));
   };
 
   return (
@@ -455,7 +455,7 @@ export function Collection() {
                     {(selectedCard.createdBy === user?.id || user?.role === 'creator' || user?.role === 'admin') && (
                       <button
                         onClick={() => {
-                          localStorage.setItem('magicschool_edit_card', JSON.stringify(selectedCard));
+                          localStorage.setItem('schoolletloose_edit_card', JSON.stringify(selectedCard));
                           navigate('/card-builder');
                         }}
                         className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors"

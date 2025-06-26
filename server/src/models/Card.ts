@@ -1,5 +1,5 @@
 import { Schema, model, Document } from 'mongoose';
-import { Card as CardType, CardType as CardTypeEnum, ManaCost, CardEffect } from '@magicschool/shared';
+import { Card as CardType, CardType as CardTypeEnum, ManaCost, CardEffect } from '../types';
 
 export interface CardDocument extends Omit<CardType, 'id'>, Document {
   _id: string;

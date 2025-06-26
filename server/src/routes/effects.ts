@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
-import { CARD_EFFECTS } from '@magicschool/shared';
-import { ApiResponse, GetEffectsResponse } from '@magicschool/shared';
+import { CARD_EFFECTS } from '../effects';
+import { ApiResponse, GetEffectsResponse } from '../types';
 
 export const effectRoutes = Router();
 

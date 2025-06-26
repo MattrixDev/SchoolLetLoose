@@ -26,7 +26,7 @@ export function ProtectedRoute({
           <div className="text-6xl mb-4">🚫</div>
           <h2 className="text-2xl font-bold text-red-300 mb-4">Account Banned</h2>
           <p className="text-gray-300 mb-4">
-            Your account has been banned and you cannot access MagicSchool.
+            Your account has been banned and you cannot access School Let Loose.
           </p>
           <p className="text-sm text-gray-400">
             If you believe this is an error, please contact support.

@@ -114,7 +114,7 @@ export function Lobby() {
     setRooms(DEMO_ROOMS);
     
     // Load user's decks
-    const savedDecks = localStorage.getItem('magicschool-decks');
+    const savedDecks = localStorage.getItem('schoolletloose-decks');
     if (savedDecks && user) {
       const allDecks = JSON.parse(savedDecks);
       const myDecks = allDecks.filter((deck: any) => deck.userId === user.id);

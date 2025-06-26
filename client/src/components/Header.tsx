@@ -34,7 +34,7 @@ export function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 text-xl font-bold text-white hover:text-blue-400 transition-colors">
             <Gamepad2 className="h-8 w-8 text-blue-500" />
-            <span>MagicSchool</span>
+            <span>School Let Loose</span>
           </Link>
 
           {/* Navigation */}

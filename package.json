@@ -1,7 +1,7 @@
 {
-  "name": "magic-school-game",
+  "name": "school-let-loose-game",
   "version": "1.0.0",
-  "description": "A multiplayer card game inspired by Magic: The Gathering with school-themed cards",
+  "description": "A multiplayer card game inspired by Magic: The Gathering with school-themed cards - School Let Loose",
   "private": true,
   "workspaces": [
     "client",
