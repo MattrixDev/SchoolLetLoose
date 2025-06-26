@@ -36,30 +36,12 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-// Demo users for development
-const DEMO_USERS: User[] = [
+// Production users - replace with real authentication system
+const PRODUCTION_USERS: User[] = [
   {
     id: '1',
-    username: 'DemoPlayer',
-    email: 'player@demo.com',
-    role: UserRole.PLAYER,
-    createdAt: new Date(),
-    isActive: true,
-    isBanned: false
-  },
-  {
-    id: '2',
-    username: 'DemoCreator',
-    email: 'creator@demo.com',
-    role: UserRole.CREATOR,
-    createdAt: new Date(),
-    isActive: true,
-    isBanned: false
-  },
-  {
-    id: '3',
-    username: 'DemoAdmin',
-    email: 'admin@demo.com',
+    username: 'mattix',
+    email: 'admin@schoolletloose.com',
     role: UserRole.ADMIN,
     createdAt: new Date(),
     isActive: true,
@@ -98,10 +80,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
 
-      // For demo purposes, check against demo users
-      const user = DEMO_USERS.find(u => u.email === email);
+      // Check against production users - in production, this should be an API call
+      const user = PRODUCTION_USERS.find(u => u.email === email);
       
-      if (!user || password !== 'password') {
+      if (!user || password !== 'mattixmagic') {
         throw new Error('Invalid email or password');
       }
 
@@ -138,19 +120,19 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       await new Promise(resolve => setTimeout(resolve, 1000));
 
       // Check if user already exists
-      const existingUser = DEMO_USERS.find(u => u.email === email || u.username === username);
+      const existingUser = PRODUCTION_USERS.find(u => u.email === email || u.username === username);
       if (existingUser) {
         throw new Error('User with this email or username already exists');
       }
 
-      // Validate password (for demo purposes, just check length)
-      if (password.length < 6) {
-        throw new Error('Password must be at least 6 characters long');
+      // Validate password
+      if (password.length < 8) {
+        throw new Error('Password must be at least 8 characters long');
       }
 
       // Create new user
       const newUser: User = {
-        id: (DEMO_USERS.length + 1).toString(),
+        id: (PRODUCTION_USERS.length + 1).toString(),
         username,
         email,
         role: UserRole.PLAYER, // Default role
@@ -159,8 +141,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         isBanned: false
       };
 
-      // Add to demo users (in real app, this would be sent to backend)
-      DEMO_USERS.push(newUser);
+      // Add to users (in real app, this would be sent to backend)
+      PRODUCTION_USERS.push(newUser);
 
       setAuthState({
         user: newUser,

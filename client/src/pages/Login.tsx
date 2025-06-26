@@ -97,15 +97,6 @@ export function Login() {
             </Link>
           </p>
         </div>
-
-        <div className="text-center text-xs text-gray-500">
-          <p className="mb-2">Demo Accounts:</p>
-          <div className="space-y-1">
-            <p>👤 Player: player@demo.com / password</p>
-            <p>✨ Creator: creator@demo.com / password</p>
-            <p>⚡ Admin: admin@demo.com / password</p>
-          </div>
-        </div>
       </div>
     </div>
   );

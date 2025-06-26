@@ -22,7 +22,7 @@ function HomePage() {
           🎓 School Let Loose
         </h1>
         <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-          Welcome to the magical world of school-themed cards! Build your deck using different school subjects as mana types and compete in strategic battles.
+          Strategic card battles with school-themed gameplay. Build decks using different subjects as mana and compete against other players.
         </p>
         
         {isAuthenticated ? (

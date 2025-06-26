@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 
 export function Register() {
-  const navigate = useNavigate();
-  const { register, isLoading } = useAuth();
+  const { isLoading } = useAuth();
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -20,28 +19,7 @@ export function Register() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (!formData.username || !formData.email || !formData.password || !formData.confirmPassword) {
-      setError('Please fill in all fields');
-      return;
-    }
-
-    if (formData.password !== formData.confirmPassword) {
-      setError('Passwords do not match');
-      return;
-    }
-
-    if (formData.password.length < 6) {
-      setError('Password must be at least 6 characters long');
-      return;
-    }
-
-    try {
-      await register(formData.username, formData.email, formData.password);
-      navigate('/'); // Redirect to home after successful registration
-    } catch (err: any) {
-      setError(err.message || 'Registration failed. Please try again.');
-    }
+    setError('Registration is currently disabled. Contact the administrator for access.');
   };
 
   return (
@@ -133,7 +111,7 @@ export function Register() {
 
         <div className="text-center">
           <p className="text-gray-400">
-            Already have an account?{' '}
+            Registration is currently closed.{' '}
             <Link to="/login" className="text-blue-400 hover:text-blue-300 font-medium">
               Sign in here
             </Link>
@@ -141,8 +119,7 @@ export function Register() {
         </div>
 
         <div className="text-center text-xs text-gray-500">
-          <p className="mb-2">By creating an account, you start as a Player.</p>
-          <p>Contact an admin to upgrade your role to Creator or Admin.</p>
+          <p>Contact the administrator for access to School Let Loose.</p>
         </div>
       </div>
     </div>
