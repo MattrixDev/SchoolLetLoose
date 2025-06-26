@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "vercel-build": "npm run build",
+    "build": "cd ../shared && npm install && npm run build && cd ../client && tsc && vite build",
+    "vercel-build": "cd ../shared && npm install && npm run build && cd ../client && npm install && tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest",
